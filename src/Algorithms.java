@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * Clase con utilidades de algoritmos de ordenación
  *
  * @author weiweng
- * @author robquir
+ * @author
  */
 public class Algorithms {
 

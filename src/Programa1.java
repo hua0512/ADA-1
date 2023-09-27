@@ -7,7 +7,7 @@ import java.time.Instant;
  * Programa de la parte 1 de la práctica
  *
  * @author weiweng
- * @author robquir
+ * @author
  */
 public class Programa1 extends BaseProgram {
 

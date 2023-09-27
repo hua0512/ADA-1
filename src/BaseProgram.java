@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Programa base de la práctica, con funciones comunes.
  *
  * @author weiweng
- * @author robquir
+ * @author
  */
 public abstract class BaseProgram {
 
