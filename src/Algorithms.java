@@ -4,10 +4,9 @@ import java.util.concurrent.ThreadLocalRandom;
  * Clase con utilidades de algoritmos de ordenación
  *
  * @author weiweng
- * @author
+ * @author marcmar
  */
 public class Algorithms {
-
 
   /**
    * Rellena un vector de tamaño n con números desde 1 hasta tamaño del vector
@@ -34,7 +33,6 @@ public class Algorithms {
     }
   }
 
-
   /**
    * Intercambio de elementos en un vector
    *
@@ -48,7 +46,6 @@ public class Algorithms {
     v[j] = tmp;
   }
 
-
   public static void ordena1(int v[], int tam, DataConfig data) {
     /* v con índices de 0 a tam-1 */
     int h, r, i, j, w;
@@ -58,14 +55,16 @@ public class Algorithms {
       h = 3 * h + 1;
     }
     while (h > 0) {
+      data.incrementarComps();
       for (i = h; i <= r; i++) {
+        data.incrementarComps();
         j = i;
         w = v[i];
         data.incrementarAsigs();
         while ((j >= h) && (w < v[j - h])) {
+          data.incrementarComps();
           v[j] = v[j - h];
           data.incrementarAsigs();
-          data.incrementarComps();
           j = j - h;
         }
         v[j] = w;
@@ -85,6 +84,7 @@ public class Algorithms {
       for (int i = start; i < end - 1; ++i) {
         data.incrementarComps();
         if (v[i] > v[i + 1]) {
+          data.incrementarComps();
           int temp = v[i];
           v[i] = v[i + 1];
           v[i + 1] = temp;
@@ -100,6 +100,7 @@ public class Algorithms {
       for (int i = end - 1; i >= start; i--) {
         data.incrementarComps();
         if (v[i] > v[i + 1]) {
+          data.incrementarComps();
           int temp = v[i];
           v[i] = v[i + 1];
           v[i + 1] = temp;
@@ -110,7 +111,6 @@ public class Algorithms {
       start = start + 1;
     }
   }
-
 
   public static  void ordena3(int[] v, int tam, DataConfig data) {
     /* v con índices de 0 a tam-1 */
@@ -141,6 +141,7 @@ public class Algorithms {
         }
       }
       while (ia <= m) {
+        data.incrementarComps();
         w[ic] = v[ia];
         ia++;
         ic++;
@@ -148,17 +149,18 @@ public class Algorithms {
       }
 
       while (ib <= r) {
+        data.incrementarComps();
         w[ic] = v[ib];
         ib++;
         ic++;
         data.incrementarAsigs();
       }
       for (int i = l; i <= r; i++) {
+        data.incrementarComps();
         v[i] = w[i];
         data.incrementarAsigs();
       }
     }
   }
-
 
 }
