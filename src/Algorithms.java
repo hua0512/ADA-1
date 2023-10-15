@@ -55,9 +55,7 @@ public class Algorithms {
       h = 3 * h + 1;
     }
     while (h > 0) {
-      data.incrementarComps();
       for (i = h; i <= r; i++) {
-        data.incrementarComps();
         j = i;
         w = v[i];
         data.incrementarAsigs();
@@ -84,7 +82,6 @@ public class Algorithms {
       for (int i = start; i < end - 1; ++i) {
         data.incrementarComps();
         if (v[i] > v[i + 1]) {
-          data.incrementarComps();
           int temp = v[i];
           v[i] = v[i + 1];
           v[i + 1] = temp;
@@ -100,7 +97,6 @@ public class Algorithms {
       for (int i = end - 1; i >= start; i--) {
         data.incrementarComps();
         if (v[i] > v[i + 1]) {
-          data.incrementarComps();
           int temp = v[i];
           v[i] = v[i + 1];
           v[i + 1] = temp;
@@ -127,7 +123,6 @@ public class Algorithms {
       int ib = m + 1;
       int ic = l;
       while ((ia <= m) && (ib <= r)) {
-        data.incrementarComps();
         if (v[ia] < v[ib]) {
           w[ic] = v[ia];
           ia++;
@@ -141,7 +136,6 @@ public class Algorithms {
         }
       }
       while (ia <= m) {
-        data.incrementarComps();
         w[ic] = v[ia];
         ia++;
         ic++;
@@ -149,14 +143,12 @@ public class Algorithms {
       }
 
       while (ib <= r) {
-        data.incrementarComps();
         w[ic] = v[ib];
         ib++;
         ic++;
         data.incrementarAsigs();
       }
       for (int i = l; i <= r; i++) {
-        data.incrementarComps();
         v[i] = w[i];
         data.incrementarAsigs();
       }
