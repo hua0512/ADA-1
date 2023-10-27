@@ -123,6 +123,7 @@ public class Algorithms {
       int ib = m + 1;
       int ic = l;
       while ((ia <= m) && (ib <= r)) {
+        data.incrementarComps();
         if (v[ia] < v[ib]) {
           w[ic] = v[ia];
           ia++;
